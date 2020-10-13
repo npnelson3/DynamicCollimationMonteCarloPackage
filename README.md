@@ -20,7 +20,7 @@ Once you have compiled your extended version of TOPAS, the following describes h
 ## Source model (genericPBS)
 This source was written to mimic a pencil beam scanning source for proton therapy. This source implements (optional) magnet-specific deflections downstream from a divergent point source. If the magnet-specific delfections are not wanted or required, the point source will rotate to provide the requested beam spot.
 
-Below are a list of the arguments to genericPBS source requires:
+Below is a list of the arguments to genericPBS source requires:
 
   - MeanEnergy = Average energy of Guassianly distributed energy spectrum.
   - EnergySigma = Standard deviation of Gaussian energy spectrum.
@@ -41,7 +41,23 @@ The spot size at isocenter is the main component in this source model that would
 
 These polynomials are defined and can be edited in Lines 60-66 of the genericPBS.cc file.
 
-## Trimmers
+## Trimmers (X1, X2, Y1, Y2)
+The trimmer extensions are rectangular prisms that linearly translate and rotate depending upon the beam's position and whether the user wants a specific trimmer to intercept the beam or not. Below is a quick summary of the direction of motion for these extensions.
+  - X1: Moves in the negative X-direction.
+  - X2: Moves in the positive X-direction.
+  - Y1: Moves in the negative Y-direction.
+  - Y2: Moves in the positive Y-direction.
+  
+Below is a list of the arguments the trimmer extensions require:
+  - HalfThickness = Half thickness of trimmer.
+  - HalfWidth = Half width of trimmer.
+  - HalfLength = Half length of trimmer.
+  - TrimmerOffset = Linear distance between medial edge of trimmer and beam central axis.
+  - Material = Material of trimmer blade. (see TOPAS documentation for default materials)
+  - TrimmerToAxisDistance = Distance from center of trimmer to isocenter.
+  - DeflectionToIsoDistance = Distance from bending magnet to isocenter. If MagnetSpecificDeflections are invoked in the source, this should be set to So/MySource/YMagnetToIsoDistance for the Y trimmers and So/MySource/XMagnetToIsoDistance for the X trimmers. If MagnetSpecificDeflections are not invoked, this should be set to So/MySource/SAD.
+  - Ypos or Xpos = Beam position in X or Y. Ideally, this would be set to So/MySource/Xpos or So/MySource/Ypos for X and Y trimmers, respectively.
+  - EnableCollimation = Boolean operator (True/False) on whether the trimmer should collimate the beam or not. If this is set to False, the trimmers will move to their default positions (centroid 6.5 cm from central axis).
 
 ## Apertures
 
