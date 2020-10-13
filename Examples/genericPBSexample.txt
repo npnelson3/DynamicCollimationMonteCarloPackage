@@ -1,0 +1,76 @@
+i:Ts/NumberofThreads = 8
+b:Ge/CheckForOverlaps = "True"
+i:Ts/ShowHistoryCountAtInterval = 10000
+b:Ge/QuitIfOverlapDetected = "False"
+b:Ts/PauseBeforeQuit = "True"
+b:Ts/ShowCPUTime = "True"
+b:Ge/CheckForUnusedComponents = "True"
+b:Gr/BEV/Active = "true"
+s:Gr/BEV/Type = "heprep"
+s:Gr/BEV/RefreshEvery = "Run"
+u:Gr/BEV/Zoom = 8
+d:Gr/BEV/Theta = 00 deg
+d:Gr/BEV/Phi = 00 deg
+i:Gr/BEV/WindowSizeX = 900
+i:Gr/BEV/WindowSizeY = 900
+b:Gr/BEV/IncludeAxes = "true"
+d:Gr/BEV/AxesSize = 5 cm
+b:Gr/SideView/Active = Gr/BEV/Active
+i:Gr/SideView/WindowPosX = 1000
+s:Gr/SideView/Type = "opengl"
+s:Gr/SideView/RefreshEvery = "Run"
+u:Gr/SideView/Zoom = 1
+d:Gr/SideView/Theta = 90 deg
+i:Gr/SideView/WindowSizeX = 900
+i:Gr/SideView/WindowSizeY = 900
+b:Gr/SideView/IncludeAxes = "true"
+d:Gr/SideView/AxesSize = 5 cm
+######################
+# Geometry
+######################
+s:Ge/World/Material = "Air"
+d:Ge/World/HLX = 0.5 m
+d:Ge/World/HLY = 0.5 m
+d:Ge/World/HLZ = 400 cm
+s:Ge/BeamLine/Type = "TsBox"
+s:Ge/BeamLine/Material = "Vacuum"
+s:Ge/BeamLine/Parent = "World"
+d:Ge/BeamLine/SnoutToIso = 422 mm
+d:Ge/BeamLine/Length = Ge/World/HLZ - Ge/BeamLine/SnoutToIso cm
+d:Ge/BeamLine/HLZ = 0.5 * Ge/BeamLine/Length cm
+d:Ge/BeamLine/HLY = 5 cm
+d:Ge/BeamLine/HLX = 5 cm
+d:Ge/BeamLine/TransZ = Ge/BeamLine/HLZ + Ge/BeamLine/SnoutToIso cm
+s:Ge/WaterTank/Type	= "TsBox"
+s:Ge/WaterTank/Material = "G4_WATER"
+s:Ge/WaterTank/Parent = "World"
+d:Ge/WaterTank/HLX      = 20. cm
+d:Ge/WaterTank/HLY      = 20. cm
+d:Ge/WaterTank/HLZ      = 20. cm
+d:Ge/WaterTank/TransX   = 0. m
+d:Ge/WaterTank/TransY   = 0. m
+d:Ge/WaterTank/SnoutToSurface = 0 cm
+d:Ge/WaterTank/TransZ   = Ge/WaterTank/SnoutToSurface - Ge/WaterTank/HLZ cm
+d:Ge/WaterTank/RotX     = 0. deg
+d:Ge/WaterTank/RotY     = 0. deg
+d:Ge/WaterTank/RotZ     = 0. deg
+######################
+# Beam Source
+######################
+s:So/Beam/Type = "genericPBS"
+s:So/Beam/Component = "BeamPosition"
+s:So/Beam/BeamParticle = "proton"
+d:So/Beam/MeanEnergy = 81.018 MeV
+d:So/Beam/EnergySigma = 0.639 MeV
+d:So/Beam/NominalEnergy = 80 MeV
+d:So/Beam/XMagnetToIsoDistance = 1825.0000 mm
+d:So/Beam/YMagnetToIsoDistance = 2195.0000 mm
+d:So/Beam/Xpos = 5 cm
+d:So/Beam/Ypos = 5 cm
+d:So/Beam/SAD = Ge/BeamPosition/TransZ mm
+i:So/Beam/NumberOfHistoriesInRun = 30
+b:So/Beam/MagnetSpecificDeflections = "False"
+d:So/Beam/BeamEnergy = 151.3 MeV
+u:So/Beam/BeamEnergySpread = 0
+d:Ge/BeamPosition/TransZ = 4000.00 mm
+

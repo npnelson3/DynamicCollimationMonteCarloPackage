@@ -1,0 +1,60 @@
+includeFile = genericPBSexample.txt
+######################
+# X Trimmers
+######################
+s:Ge/X1/Type = "X1"
+s:Ge/X2/Type = "X2"
+s:Ge/X1/Parent = "World"
+s:Ge/X2/Parent = "World"
+d:Ge/X1/TrimmerToAxisDistance = 65.000 mm
+d:Ge/X1/DeflectionToIsoDistance = So/Beam/XMagnetToIsoDistance mm
+d:Ge/X2/TrimmerToAxisDistance = 65.000 mm
+d:Ge/X2/DeflectionToIsoDistance = So/Beam/XMagnetToIsoDistance mm
+d:Ge/X1/HalfThickness = 20 mm
+d:Ge/X1/HalfWidth = 15 mm
+d:Ge/X1/HalfLength = 80 mm
+d:Ge/X2/HalfThickness = Ge/X1/HalfThickness mm
+d:Ge/X2/HalfWidth = Ge/X1/HalfWidth mm
+d:Ge/X2/HalfLength = Ge/X1/HalfLength mm
+s:Ge/X1/Material = "Nickel200"
+s:Ge/X2/Material = "Nickel200"
+d:Ge/X1/SAD = So/Beam/SAD mm
+d:Ge/X2/SAD = So/Beam/SAD mm
+b:Ge/X1/EnableCollimation = "True"
+b:Ge/X2/EnableCollimation = "True"
+d:Ge/X1/Xpos = So/Beam/Xpos mm
+d:Ge/X2/Xpos = So/Beam/Xpos mm
+d:Ge/X1/TrimmerOffset = 0.000 mm
+d:Ge/X2/TrimmerOffset = Ge/X1/TrimmerOffset mm
+######################
+# Y Trimmers
+######################
+s:Ge/Y1/Type = "Y1"
+s:Ge/Y2/Type = "Y2"
+s:Ge/Y1/Parent = "World"
+s:Ge/Y2/Parent = "World"
+d:Ge/Y1/TrimmerToAxisDistance = 106.500 mm
+d:Ge/Y1/DeflectionToIsoDistance = So/Beam/YMagnetToIsoDistance mm
+d:Ge/Y2/TrimmerToAxisDistance = 106.500 mm
+d:Ge/Y2/DeflectionToIsoDistance = So/Beam/YMagnetToIsoDistance mm
+d:Ge/Y1/HalfThickness = 20 mm
+d:Ge/Y1/HalfWidth = 15 mm
+d:Ge/Y1/HalfLength = 80 mm
+d:Ge/Y2/HalfThickness = Ge/Y1/HalfThickness mm
+d:Ge/Y2/HalfWidth = Ge/Y1/HalfWidth mm
+d:Ge/Y2/HalfLength = Ge/Y1/HalfLength mm
+s:Ge/Y1/Material = "Nickel200"
+s:Ge/Y2/Material = "Nickel200"
+d:Ge/Y1/SAD = So/Beam/SAD mm
+d:Ge/Y2/SAD = So/Beam/SAD mm
+b:Ge/Y1/EnableCollimation = "True"
+b:Ge/Y2/EnableCollimation = "True"
+d:Ge/Y1/Ypos = So/Beam/Ypos mm
+d:Ge/Y2/Ypos = So/Beam/Ypos mm
+d:Ge/Y1/TrimmerOffset = 0.000 mm
+d:Ge/Y2/TrimmerOffset = Ge/Y1/TrimmerOffset mm
+sv:Ma/Nickel200/Components = 5 "Nickel" "Carbon" "Copper" "Iron" "Silicon"
+uv:Ma/Nickel200/Fractions = 5 0.99 0.0015 0.0025 0.004 0.002
+d:Ma/Nickel200/Density = 8.908 g/cm3
+s:Ma/Nickel200/DefaultColor = "indigo"
+
