@@ -39,7 +39,7 @@ The spot size at isocenter is the main component in this source model that would
 <p align="center">
 <img src="https://render.githubusercontent.com/render/math?math=\sigma_{X or Y}(E) = a_0E^5 %2B a_1E^4 %2B a_2E^3 %2B a_3E^2 %2B a_4E %2B a_5">
 
-These polynomials are defined and can be edited in Lines 60-66 of the genericPBS.cc file.
+These polynomials are defined and can be edited in Lines 60-66 of the genericPBS.cc file. They can also be modified to support lower or higher order polynomial functions.
 
 ## Trimmers (X1, X2, Y1, Y2)
 The trimmer extensions are rectangular prisms that linearly translate and rotate depending upon the beam's position and whether the user wants a specific trimmer to intercept the beam or not. Below is a quick summary of the direction of motion for these extensions.
