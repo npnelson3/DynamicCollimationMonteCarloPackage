@@ -37,7 +37,7 @@ Below is a list of the arguments to genericPBS source requires:
 The spot size at isocenter is the main component in this source model that would need to be changed when modeling a specific beamline. The genericPBS source samples from a Gaussian distributed fluence pattern at isocenter and back-projects the point source location to deduce the angular distribution required to match that spot size at isocenter. In it's current implementation, the source samples an asymmetric spot size (different sigma's in X and Y) specified by a polynomial of the form:
 
 <p align="center">
-<img src="https://render.githubusercontent.com/render/math?math=\sigma_X(E) = a_0E^5 %2B a_1E^4 %2B a_2E^3 %2B a_3E^2 %2B a_4E %2B a_5">
+<img src="https://render.githubusercontent.com/render/math?math=\sigma_{X or Y}(E) = a_0E^5 %2B a_1E^4 %2B a_2E^3 %2B a_3E^2 %2B a_4E %2B a_5">
 
 These polynomials are defined and can be edited in Lines 60-66 of the genericPBS.cc file.
 
