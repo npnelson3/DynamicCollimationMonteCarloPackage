@@ -9,7 +9,7 @@ The source model is particle generator extension for TOPAS and was specifically 
 The two collimation components included in the package are trimmers and apertures. The trimmers are modeled after the Dynamic Collimation System and linearly translate while rotating about the magnet planes to match the divergence of the scanned beam. The aperture is a Boolean geometry component with a user-specified cutout size and the native TOPAS commands can be used to alter the physical dimensions of the apertures.
 
 # Installation
-Please see the TOPAS documentation for installing extensions. The .cc and .hh files must be placed in your TOPAS extension folder and cmake must be called to compile the new, extended TOPAS application. For example, if you have all of the extension files in a folder called DCMC, go to your topas directory and extecute the following:
+Please see the TOPAS documentation for installing extensions. The .cc and .hh files must be placed in your TOPAS extension folder and cmake must be called to compile the new, extended TOPAS application. For example, if you have all of the extension files in a folder called DCMC, and that's within a folder that houses any other extensions you may have (topas_extensions), go to your topas directory and extecute the following:
 ```
 cmake -DTOPAS_EXTENSIONS_DIR=../topas_extensions/DCMC
 make -j8
