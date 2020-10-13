@@ -2,7 +2,7 @@
 By Nick Nelson <npnelson3@gmail.com>
 
 # Features
-The Dynamic Collimation Monte Carlo (DCMC) was developed to help facilitate the simulation of pencil beam scanning proton beams and collimation devices. The DCMC package utilized the the TOPAS Monte Carlo platform and consists of a generalized PBS source model and collimator component extensions. This guide assumes that users are fimiliar with the TOPAS Monte Carlo platform. For more info on TOPAS, please see [topasmc.org](topasmc.org)
+The Dynamic Collimation Monte Carlo (DCMC) was developed to help facilitate the simulation of pencil beam scanning proton beams and collimation devices. The DCMC package utilized the the TOPAS Monte Carlo platform and consists of a generalized PBS source model and collimator component extensions. This guide assumes that users are fimiliar with the TOPAS Monte Carlo platform. For more info on TOPAS, please see [topasmc.org](topasmc.org).
 
 The source model is particle generator extension for TOPAS and was specifically written to model a pencil beam scanning proton therapy beamline. It constists of a divergent point source placed at a user-specified SAD that samples a spot size function and back projects the sampled points to the SAD to deduce the angular distribution of the source. For most beamlines, magnets will deflect the beam in X and Y at different locations. This source model includes magnet-specific deflections given distances to the X and Y magnets from isocenter. If the magnet deflections are not invoked in the TOPAS parameter file, the divergent point source will rotate to produce the user-specified deflections.
 
