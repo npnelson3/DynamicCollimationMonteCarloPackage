@@ -57,8 +57,8 @@ G4VPhysicalVolume* Aperture::Construct()
 	G4Box* outerplate = new G4Box(fName, HalfLengthX, HalfLengthY, HalfLengthZ);
 	
 	//Call dimensions of field size
-	G4double CutoutX = fPm->GetDoubleParameter(GetFullParmName("CutoutSizeX"), "Length");
-	G4double CutoutY = fPm->GetDoubleParameter(GetFullParmName("CutoutSizeY"), "Length");
+	G4double CutoutX = fPm->GetDoubleParameter(GetFullParmName("ApertureHalfWidthX"), "Length");
+	G4double CutoutY = fPm->GetDoubleParameter(GetFullParmName("ApertureHalfWidthY"), "Length");
 	
 	//Create cutout using dimensions
 	G4Box* cutout = new G4Box(fName, CutoutX, CutoutY, HalfLengthZ);
