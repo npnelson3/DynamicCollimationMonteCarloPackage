@@ -22,14 +22,14 @@ This source was written to mimic a pencil beam scanning source for proton therap
 
 Below is a list of the arguments to genericPBS source requires:
 
-  - *MeanEnergy* = Average energy of Guassianly distributed energy spectrum.
-  - EnergySigma = Standard deviation of Gaussian energy spectrum.
-  - Xpos = Position in X of central axis of beam at isocenter.
-  - Ypos = Position in Y of central axis of beam at isocenter.
-  - SAD = Source to axis distance. Distance the sampled point source is placed from isocenter. This parameter is something that would be optimized one a beamline-specific basis. This parameter can be manipulated to alter the angular distribution of the point source.
-  - XMagnetToIsoDistance = Distance from isocenter to X bending magnet.
-  - YMagnetToIsoDistance = Distance from isocenter to Y bending magnet.
-  - MagnetSpecificDeflections = Boolean operator (True/False) on whether to invoke magnet-specific deflections. If true, deflections occur at magnet planes; if false, point source rotates to provide beam spot at (Xpos,Ypos).
+  - **MeanEnergy** = Average energy of Guassianly distributed energy spectrum.
+  - **EnergySigma** = Standard deviation of Gaussian energy spectrum.
+  - **Xpos** = Position in X of central axis of beam at isocenter.
+  - **Ypos** = Position in Y of central axis of beam at isocenter.
+  - **SAD** = Source to axis distance. Distance the sampled point source is placed from isocenter. This parameter is something that would be optimized one a beamline-specific basis. This parameter can be manipulated to alter the angular distribution of the point source.
+  - **XMagnetToIsoDistance** = Distance from isocenter to X bending magnet.
+  - **YMagnetToIsoDistance** = Distance from isocenter to Y bending magnet.
+  - **MagnetSpecificDeflections** = Boolean operator (True/False) on whether to invoke magnet-specific deflections. If true, deflections occur at magnet planes; if false, point source rotates to provide beam spot at (Xpos,Ypos).
 
 **IMPORTANT**: When calling this source in the TOPAS parameter file, the parameters d:So/MySource/BeamEnergy and d:So/MySource/BeamEnergySpectrum must be defined for the source to run. It should be emphasized that the values entered here have no impact on the simulated energy spectrum, they just need to be defined given the way TOPAS is currently configured.
 
@@ -43,23 +43,33 @@ These polynomials are defined and can be edited in Lines 60-66 of the genericPBS
 
 ## Trimmers (X1, X2, Y1, Y2)
 The trimmer extensions are rectangular prisms that linearly translate and rotate depending upon the beam's position and whether the user wants a specific trimmer to intercept the beam or not. Below is a quick summary of the direction of motion for these extensions.
-  - X1: Moves in the negative X-direction.
-  - X2: Moves in the positive X-direction.
-  - Y1: Moves in the negative Y-direction.
-  - Y2: Moves in the positive Y-direction.
+  - **X1**: Moves in the negative X-direction.
+  - **X2**: Moves in the positive X-direction.
+  - **Y1**: Moves in the negative Y-direction.
+  - **Y2**: Moves in the positive Y-direction.
   
 Below is a list of the arguments the trimmer extensions require:
-  - HalfThickness = Half thickness of trimmer.
-  - HalfWidth = Half width of trimmer.
-  - HalfLength = Half length of trimmer.
-  - TrimmerOffset = Linear distance between medial edge of trimmer and beam central axis.
-  - Material = Material of trimmer blade. (see TOPAS documentation for default materials)
-  - TrimmerToAxisDistance = Distance from center of trimmer to isocenter.
-  - DeflectionToIsoDistance = Distance from bending magnet to isocenter. If MagnetSpecificDeflections are invoked in the source, this should be set to So/MySource/YMagnetToIsoDistance for the Y trimmers and So/MySource/XMagnetToIsoDistance for the X trimmers. If MagnetSpecificDeflections are not invoked, this should be set to So/MySource/SAD.
-  - Ypos or Xpos = Beam position in X or Y. Ideally, this would be set to So/MySource/Xpos or So/MySource/Ypos for X and Y trimmers, respectively.
-  - EnableCollimation = Boolean operator (True/False) on whether the trimmer should collimate the beam or not. If this is set to False, the trimmers will move to their default positions (centroid 6.5 cm from central axis).
+  - **HalfThickness** = Half thickness of trimmer.
+  - **HalfWidth** = Half width of trimmer.
+  - **HalfLength** = Half length of trimmer.
+  - **TrimmerOffset** = Linear distance between medial edge of trimmer and beam central axis.
+  - **Material** = Material of trimmer blade. (see TOPAS documentation for default materials)
+  - **TrimmerToAxisDistance** = Distance from center of trimmer to isocenter.
+  - **DeflectionToIsoDistance** = Distance from bending magnet to isocenter. If MagnetSpecificDeflections are invoked in the source, this should be set to So/MySource/YMagnetToIsoDistance for the Y trimmers and So/MySource/XMagnetToIsoDistance for the X trimmers. If MagnetSpecificDeflections are not invoked, this should be set to So/MySource/SAD.
+  - **Ypos or Xpos** = Beam position in X or Y. Ideally, this would be set to So/MySource/Xpos or So/MySource/Ypos for X and Y trimmers, respectively.
+  - **EnableCollimation** = Boolean operator (True/False) on whether the trimmer should collimate the beam or not. If this is set to False, the trimmers will move to their default positions (centroid 6.5 cm from central axis).
 
 ## Apertures
+Thea aperture extension is a Boolean geometry component defined by the subtraction of two rectangular prisms. The inputs to the aperture component are as follows:
 
+  - **HLZ** = Half Length in Z-direction.
+  - **HLX** = Half Length in X-direction.
+  - **HLY** = Half Length in Y-direction.
+  - **TransX** = Translation in X-direction.
+  - **TransY** = Translation in Y-direction.
+  - **ApertureToIsoDistance** = Distance between centroid of aperture and isocenter.
+  - **ApertureHalfWidthX** = Half width of aperture cutout in X-direction. This must always be greater than HLX.
+  - **ApertureHalfWidthY** = Half width of aperture cutout in Y-direction. This must always be greater than HLY.
+  
 # Examples
 Some example parameter files can be found in the [Examples](https://github.com/npnelson3/DynamicCollimationMonteCarloPackage/tree/master/Examples) folder.
