@@ -72,6 +72,7 @@ Thea aperture extension is a Boolean geometry component defined by the subtracti
   - **ApertureToIsoDistance** = Distance between centroid of aperture and isocenter.
   - **ApertureHalfWidthX** = Half width of aperture cutout in X-direction. This must always be greater than HLX.
   - **ApertureHalfWidthY** = Half width of aperture cutout in Y-direction. This must always be greater than HLY.
+  - **Material** = Aperture component material. (see TOPAS documentation for default materials)
   
 # Examples
 Some example parameter files can be found in the [Examples](https://github.com/npnelson3/DynamicCollimationMonteCarloPackage/tree/master/Examples) folder.
