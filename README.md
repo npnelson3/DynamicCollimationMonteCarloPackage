@@ -48,7 +48,8 @@ The trimmer extensions are rectangular prisms that linearly translate and rotate
   - **Y1**: Moves in the negative Y-direction.
   - **Y2**: Moves in the positive Y-direction.
   
-Below is a list of the arguments the trimmer extensions require:
+Each trimmer type can be called by setting s:Ge/MyTrimmer/Type = "X1". Below is a list of the arguments the trimmer extensions require after the type has been declared:
+  - **Parent** = Parent geometry component.
   - **HalfThickness** = Half thickness of trimmer.
   - **HalfWidth** = Half width of trimmer.
   - **HalfLength** = Half length of trimmer.
@@ -62,6 +63,7 @@ Below is a list of the arguments the trimmer extensions require:
 ## Apertures
 Thea aperture extension is a Boolean geometry component defined by the subtraction of two rectangular prisms. The inputs to the aperture component are as follows:
 
+  - **Parent** = Parent geometry component.
   - **HLZ** = Half Length in Z-direction.
   - **HLX** = Half Length in X-direction.
   - **HLY** = Half Length in Y-direction.
