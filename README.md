@@ -22,7 +22,7 @@ This source was written to mimic a pencil beam scanning source for proton therap
 
 Below is a list of the arguments to genericPBS source requires:
 
-  - MeanEnergy = Average energy of Guassianly distributed energy spectrum.
+  - *MeanEnergy* = Average energy of Guassianly distributed energy spectrum.
   - EnergySigma = Standard deviation of Gaussian energy spectrum.
   - Xpos = Position in X of central axis of beam at isocenter.
   - Ypos = Position in Y of central axis of beam at isocenter.
