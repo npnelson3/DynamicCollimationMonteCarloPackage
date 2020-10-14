@@ -1,0 +1,15 @@
+includeFile = genericPBSexample.txt
+######################
+# Single aperture with 10cm cutout
+######################
+s:Ge/Aperture/Type = "Aperture"
+s:Ge/Aperture/Parent = "World"
+d:Ge/Aperture/HLZ = 1 cm
+d:Ge/Aperture/HLX = 10 cm
+d:Ge/Aperture/HLY = 10 cm
+d:Ge/Aperture/ApertureToIsoDistance = 6.5 cm
+d:Ge/Aperture/TransX = 0 cm
+d:Ge/Aperture/TransY = 0 cm
+d:Ge/Aperture/ApertureHalfWidthX = 5 cm
+d:Ge/Aperture/ApertureHalfWidthY = 5 cm
+s:Ge/Aperture/Material = "G4_Ni"
