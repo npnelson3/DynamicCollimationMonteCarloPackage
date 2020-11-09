@@ -1,6 +1,8 @@
 # Dynamic Collimation Monte Carlo package
 By Nick Nelson <npnelson3@gmail.com>
 
+To cite this package, please cite through Zenodo: https://doi.org/10.5281/zenodo.4088273
+
 # Features
 The Dynamic Collimation Monte Carlo (DCMC) was developed to help facilitate the simulation of pencil beam scanning proton beams and collimation devices. The DCMC package utilized the the TOPAS Monte Carlo platform and consists of a generalized PBS source model and collimator component extensions. This guide assumes that users are fimiliar with the TOPAS Monte Carlo platform. For more info on TOPAS, please see [topasmc.org](topasmc.org).
 
