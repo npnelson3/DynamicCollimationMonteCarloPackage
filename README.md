@@ -31,7 +31,7 @@ Below is a list of the arguments to genericPBS source requires:
   - **SAD** = Source to axis distance. Distance the sampled point source is placed from isocenter. This parameter is something that would be optimized one a beamline-specific basis. This parameter can be manipulated to alter the angular distribution of the point source.
   - **XMagnetToIsoDistance** = Distance from isocenter to X bending magnet.
   - **YMagnetToIsoDistance** = Distance from isocenter to Y bending magnet.
-  - **MagnetSpecificDeflections** = Boolean operator (True/False) on whether to invoke magnet-specific deflections. If true, deflections occur at magnet planes; if false, point source rotates to provide beam spot at (Xpos,Ypos).
+  - **MagnetSpecificDeflections** = Boolean operator (True/False) on whether to invoke magnet-specific deflections. If true, deflections occur at magnet planes; if false, the point source rotates about the SAD to provide beam spot at (Xpos,Ypos).
 
 **IMPORTANT**: When calling this source in the TOPAS parameter file, the parameters d:So/MySource/BeamEnergy and d:So/MySource/BeamEnergySpectrum must be defined for the source to run. It should be emphasized that the values entered here have no impact on the simulated energy spectrum, they just need to be defined given the way TOPAS is currently configured.
 
