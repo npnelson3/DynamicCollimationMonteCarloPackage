@@ -1,6 +1,7 @@
 # Dynamic Collimation Monte Carlo package
 By Nick Nelson <npnelson3@gmail.com>
 
+For more informatin regarding the development of this package, please see: https://doi.org/10.1002/mp.14846
 To cite this package, please cite through Zenodo: https://doi.org/10.5281/zenodo.4088273
 
 # Features
