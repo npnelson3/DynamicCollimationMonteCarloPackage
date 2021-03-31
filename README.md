@@ -2,6 +2,7 @@
 By Nick Nelson <npnelson3@gmail.com>
 
 Please see https://doi.org/10.1002/mp.14846 for more information regarding the development of this package.
+
 To cite this package, please cite through Zenodo: https://doi.org/10.5281/zenodo.4088273
 
 # Features
