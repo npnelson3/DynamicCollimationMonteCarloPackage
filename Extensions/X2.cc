@@ -54,7 +54,7 @@ G4VPhysicalVolume* X2::Construct()
         G4cout << "Medial edge for X2 at Isoplane = " << (Xpos + TrimmerOffset) << "mm" << G4endl;
 	G4double XMedial = (Xpos + TrimmerOffset)* (1 - (XAD/MADx));
 	G4cout << "Medial edge for X2 at Trimmer Plane = " << XMedial << "mm" << G4endl;
-	G4double Theta = atan(XMedial/(MADx-XAD)); // Value in radians
+	G4double Theta = atan(XMedial/(MADx)); // Value in radians
 	G4cout << "Computed theta for X2 = " << Theta * 180 / PI << "deg" << G4endl;
 	G4double XTrimmerCenter = XMedial + (TrimmerHalfWidth/cos(Theta));
 	//G4cout << "Centroid location for X2 = " << XTrimmerCenter * 0.1 << "cm" << G4endl;
